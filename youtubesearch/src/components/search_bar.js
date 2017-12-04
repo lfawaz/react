@@ -1,20 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import '../style/search_bar.css'
 
-class SearchBar extends Component {
-  constructor(props){
-    super(props)
 
-    this.state = { term : ''}
+const SearchBar = ({ videoSearch }) => {
 
-  }
-  render(){
     return(
       <div>
-      <input onChange={e => this.setState({ term: e.target.value}) }/>
-      
+      <input onChange={e => videoSearch(e.target.value)}/>
       </div>
     )
   }
-}
+
 
 export default SearchBar

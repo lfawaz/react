@@ -1,10 +1,18 @@
 import React from 'react'
+import VideoItem from './video_item'
+import '../style/video_list.css'
 
-const videoList = ({videos}) => {
+const VideoList = ({videos, selectVideo}) => {
+
+
   const videoList = videos.map(video => (
-    <li video.></li>
+    <VideoItem key={video.id} video={video} selectVideo={selectVideo}/>
   ))
-  return()
+  return(
+    <div className='video-list'>
+    {videoList}
+    </div>
+  )
 }
 
-export default videoList
+export default VideoList
