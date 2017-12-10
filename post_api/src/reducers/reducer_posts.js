@@ -1,9 +1,10 @@
-import { FETCH_URL } from '../actions/index.js'
+import { FETCH_URL, DELETE_POST } from '../actions/index.js'
 
 export default function(state =[], action){
   switch(action.type){
     case FETCH_URL:
       return convertToObject(action.payload.data)
+
   }
   return state
 }

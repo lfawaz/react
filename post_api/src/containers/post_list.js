@@ -13,7 +13,9 @@ class PostList extends Component {
 
     const PostObject = this.props.PostList
     const PostList = Object.keys(PostObject).map(postkey =>
-      <li className='list-group-item' key={postkey}>{PostObject[postkey].title}</li>
+      <li className='list-group-item' key={postkey}>
+      <Link to={`/post/${postkey}`}>{PostObject[postkey].title}</Link>
+      </li>
     )
     return(<div>
       <div className="text-xs-right">
