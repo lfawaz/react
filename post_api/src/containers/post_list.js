@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getPosts } from '../actions/index'
+import { Link } from 'react-router-dom'
 
 class PostList extends Component {
   componentDidMount(){
@@ -15,6 +16,9 @@ class PostList extends Component {
       <li className='list-group-item' key={postkey}>{PostObject[postkey].title}</li>
     )
     return(<div>
+      <div className="text-xs-right">
+      <Link className="btn btn-primary" to="/post/new">Add Post</Link>
+      </div>
       <ul className='list-group'>
       <h3> Posts </h3>
       {PostList}
